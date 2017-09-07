@@ -1,0 +1,25 @@
+# To be put in: /etc/systemd/system/dns_relay.service
+# sudo systemctl enable dns_relay.service
+# sudo systemctl daemon-reload
+# sudo systemctl start dns_relay.service
+[Unit]
+Description=DNS Relay deamon
+After=
+
+[Service]
+Type=simple
+
+User=root
+Group=root
+UMask=007
+
+ExecStart=/usr/bin/python3 /opt/dnsrelay/dns_relay.py
+# To be changed
+WorkingDirectory=/root
+Restart=on-failure
+
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target
