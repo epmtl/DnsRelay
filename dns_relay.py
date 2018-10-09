@@ -90,10 +90,10 @@ class DNSRelayOverHTTPS:
         #             "name": "google.ca.",
         #             "type": 1,
         #             "TTL": 299,
-        #             "data": "172.217.10.67"
+        #             "data": "y.y.y.y"
         #         },...
         #     ],
-        #     "Comment": "Response from 216.239.32.10"
+        #     "Comment": "Response from x.x.x.x"
         # }
 
         d = self.dns_request.reply()
